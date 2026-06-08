@@ -1,0 +1,39 @@
+# Python 3.12 推奨
+# インストール: uv pip install -r requirements.txt
+
+# ── GIS・地理空間 ──────────────────────────────────────
+# cartopy
+# geopandas
+# rasterio
+# pyproj
+# shapely
+
+# ── データ処理 ─────────────────────────────────────────
+numpy
+pandas
+requests
+
+# ── 可視化 ─────────────────────────────────────────────
+# matplotlib
+# folium
+
+# ── 実行環境 ───────────────────────────────────────────
+# jupyter
+# ipykernel
+
+# ── ユーティリティ ─────────────────────────────────────
+python-dotenv
+
+# Pdf to markdown with images
+pymupdf4llm
+
+# pptx handling
+python-pptx
+
+# Excel handling
+openpyxl
+
+# for IDE spyder install, 
+# read this https://docs.spyder-ide.org/current/installation.html#using-pip
+
+

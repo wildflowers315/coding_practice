@@ -1,0 +1,55 @@
+# ── 認証情報・環境変数 ────────────────────────────────────
+.env
+
+# ── Python ───────────────────────────────────────────────
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# ── Jupyter ──────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── データファイル（大容量・生成物） ─────────────────────
+data/
+# *.csv
+# *.xlsx
+# *.json
+# !config/*.json
+
+# GIS データ
+# *.shp
+# *.shx
+# *.dbf
+# *.prj
+# *.cpg
+# *.geojson
+# *.gpkg
+# *.tif
+# *.tiff
+# *.img
+# *.nc
+# *.zip
+
+# ── ログ・一時ファイル ────────────────────────────────────
+# *.log
+# *.tmp
+# *.bak
+output/
+# logs/
+
+# ── OS・エディタ ──────────────────────────────────────────
+# .DS_Store
+# Thumbs.db
+# desktop.ini
+# .vscode/settings.json
+# .idea/
+# *.swp
+# *.swo

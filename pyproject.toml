@@ -1,0 +1,14 @@
+[project]
+name = "coding-practice"
+version = "0.1.0"
+description = "AIコードエージェントによるデータ・GIS解析入門"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.4.6",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.3",
+    "pymupdf4llm>=1.27.2.3",
+    "python-dotenv>=1.2.2",
+    "python-pptx>=1.0.2",
+    "requests>=2.34.2",
+]
