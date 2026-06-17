@@ -1,12 +1,15 @@
 # Python 3.12 推奨
-# インストール: uv pip install -r requirements.txt
+# uv を使う場合（推奨）: uv sync
+# pip を使う場合:        pip install -r requirements.txt
 
 # ── GIS・地理空間 ──────────────────────────────────────
-# cartopy
-# geopandas
-# rasterio
-# pyproj
-# shapely
+geopandas
+pyproj
+contextily
+
+# ── Google Earth Engine ───────────────────────────────
+earthengine-api
+geemap
 
 # ── データ処理 ─────────────────────────────────────────
 numpy
@@ -14,26 +17,17 @@ pandas
 requests
 
 # ── 可視化 ─────────────────────────────────────────────
-# matplotlib
-# folium
+matplotlib
+japanize-matplotlib
+# folium  # インタラクティブ地図（geemap の依存として自動インストール済み）
 
 # ── 実行環境 ───────────────────────────────────────────
-# jupyter
-# ipykernel
+jupyter
 
 # ── ユーティリティ ─────────────────────────────────────
 python-dotenv
 
-# Pdf to markdown with images
+# ── ドキュメント処理 ───────────────────────────────────
 pymupdf4llm
-
-# pptx handling
 python-pptx
-
-# Excel handling
 openpyxl
-
-# for IDE spyder install, 
-# read this https://docs.spyder-ide.org/current/installation.html#using-pip
-
-

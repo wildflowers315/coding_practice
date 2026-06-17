@@ -169,6 +169,26 @@ uv sync
 
 > **`uv.lock` について:** `uv add` を実行すると `uv.lock` が自動生成されます。このファイルをリポジトリに含めることで、誰がどの環境で `uv sync` を実行しても完全に同じパッケージバージョンを再現できます。
 
+#### リポジトリの環境が更新されたとき（`uv sync` の使い方）
+
+このリポジトリに新しいパッケージが追加された場合（`pyproject.toml` や `uv.lock` が更新された場合）、クローン済みの環境は以下の手順で同期してください。
+
+```bash
+# 最新の変更を取得
+git pull
+
+# 環境をリポジトリの状態に同期（追加・削除を自動で反映）
+uv sync
+```
+
+`uv sync` は `uv.lock` をもとに環境を再現するため、バージョンの差異が生じません。
+
+| 操作 | コマンド | 使いどころ |
+|------|---------|-----------|
+| 新しいパッケージを追加する | `uv add <package>` | 自分で追加するとき |
+| リポジトリの変更を反映する | `uv sync` | `git pull` の後 |
+| 環境を一から再現する | `uv sync` | 初回クローン後 |
+
 #### レガシーワークフロー（参考）
 
 `pip` に慣れている場合や既存スクリプトとの互換性が必要な場合は、以下の方法も使えます。
@@ -247,10 +267,12 @@ git merge upstream/main
 ```
 docs/
 └── 00_env/
-    ├── 01_python_env.md   # Python 環境セットアップ詳細・IDE 使い方・GIS ライブラリ入門
-    └── 02_claude_code.md  # Claude Code の使い方・コンテキスト・モデル・セッション再開
+    ├── [01_python_env.md](docs/00_env/01_python_env.md)   # Python 環境セットアップ詳細・IDE 使い方・GIS ライブラリ入門
+    ├── [02_claude_code.md](docs/00_env/02_claude_code.md)  # Claude Code の使い方・コンテキスト・モデル・セッション再開
+    └── [03_vscode.md](docs/00_env/03_vscode.md)           # VS Code の使い方（Bash 設定・行実行・Jupyter・デバッガ）
 
 scripts/
-└── sample.py              # 各パッケージ（numpy・pandas・requests・openpyxl・pptx・pymupdf4llm）の使用例
+├── sample.py              # 各パッケージ（numpy・pandas・requests・openpyxl・pptx・pymupdf4llm）の使用例
+└── python-gee.ipynb       # Google Earth Engine チュートリアル（夜間光データの時系列解析）
 ```
 
